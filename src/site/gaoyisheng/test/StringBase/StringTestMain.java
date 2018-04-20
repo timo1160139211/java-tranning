@@ -14,6 +14,10 @@ public class StringTestMain {
         testEquals2();
 
         System.out.println("\n" +
+                "-----testEquals3()-----");
+        testEquals3();
+
+        System.out.println("\n" +
                 "-----testIntern()-----");
         testIntern();
     }
@@ -50,6 +54,21 @@ public class StringTestMain {
         System.out.println(b == compare);
         System.out.println(d == compare);//编译优化，final能确定，所以指向同一个
         System.out.println(e == compare);
+    }
+
+    public static void testEquals3() {
+        String a = "a";
+        final String c = "a";
+
+        String b = a + "b";
+        String d = c + "b";
+        String e = getA() + "b";
+
+        String compare = "ab";
+
+        System.out.println(b.equals(compare));
+        System.out.println(d.equals(compare));
+        System.out.println(e.equals(compare));
     }
 
     /**
