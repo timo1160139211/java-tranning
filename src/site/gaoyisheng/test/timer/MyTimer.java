@@ -1,8 +1,13 @@
 package site.gaoyisheng.test.timer;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Timer;
 
 public class MyTimer {
+
+
+
 
     public static void main(String[] args) {
         //1.创建一个Timer实例
@@ -15,6 +20,7 @@ public class MyTimer {
 
         //  第一次执行是在当前时间的两秒之后，然后每间隔1秒执行一次
         timer.schedule(myTimerTask,2000L,1000L);
+
 
     }
 

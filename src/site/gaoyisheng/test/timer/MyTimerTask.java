@@ -17,7 +17,7 @@ public class MyTimerTask extends TimerTask{
         //Format:
         //YY-MM-DD hh:mm:ss
         Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YY-MM-DD hh:mm:ss");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-DD hh:mm:ss");
 
         System.out.println("Current time is " + simpleDateFormat.format(calendar.getTime()));
         System.out.println("Current task name is " + name);
