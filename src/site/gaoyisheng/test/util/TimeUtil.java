@@ -5,15 +5,27 @@ import java.util.Calendar;
 
 public class TimeUtil {
 
-    Calendar calendar = Calendar.getInstance();
-    SimpleDateFormat simpleDateFormat; //= new SimpleDateFormat("YYYY-MM-DD hh:mm:ss");
+    private Calendar calendar = Calendar.getInstance();
+    private SimpleDateFormat simpleDateFormat; //= new SimpleDateFormat("YYYY-MM-DD hh:mm:ss");
 
-    public String getTime(){
+    public TimeUtil(){
         simpleDateFormat = new SimpleDateFormat("YYYY-MM-DD hh:mm:ss");
-        return simpleDateFormat.format(calendar.getTime());
     }
 
     public TimeUtil(String format){
         simpleDateFormat = new SimpleDateFormat(format);
+    }
+
+    public String getCurrentTime(){
+        return simpleDateFormat.format(calendar.getTime());
+    }
+
+    /*****   getter   ******/
+    public Calendar getCalendar() {
+        return calendar;
+    }
+
+    public SimpleDateFormat getSimpleDateFormat() {
+        return simpleDateFormat;
     }
 }
